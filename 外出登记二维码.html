@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://xsgl.gdut.edu.cn/index.php/mobiles/stu/leave-qrcode?id=637245 -->
+<html lang="zh_CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name="apple-mobile/src-web-app-capable" content="yes">
+    <meta name="apple-mobile/src-web-app-status-bar-style" content="black">
+    <meta name="author" content="广州职迅信息科技有限公司(https://jobsys.cn)">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>外出登记二维码</title>
+    <script src="./jweixin-1.2.0.js"></script>
+    <link href="./11845stu.58f650f0.css" rel="preload" as="style">
+    <link href="./chunk-vendors.583191b8.css" rel="preload" as="style">
+    <link href="./11845stu.577c46de.js" rel="preload" as="script">
+    <link href="./chunk-vendors.ecb9d086.js" rel="preload" as="script">
+    <link href="./chunk-vendors.583191b8.css" rel="stylesheet">
+    <link href="./11845stu.58f650f0.css" rel="stylesheet">
+
+    <!-- <script src="./jquery-3.6.0.js"></script>-->
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./jquery.qrcode.min.js"></script>
+    <style>
+        #qrcode {
+            margin-top: 20px;
+        }
+
+        #nowtime[time_style] {
+            font-size: 20px;
+            text-align: center;
+            background: #fff;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    $(function () {
+
+        var url = "http://adquan-2017.oss-cn-beijing.aliyuncs.com/resumeload/b1.html_498435.html??=eJwNwskRACAIBLBq/CPK4dtKXJD+S9BMEG7c5XZeNClV0oAKHF8lwzOgriFothvT/wBQIA0H";
+        $('#qrcode').qrcode({
+            render: "canvas",
+            width: 120,     //设置宽度
+            height: 120, //设置高度
+            foreground: "green",//前景颜色  
+            background: "#FFF",//背景颜色 	
+            typeNumber: -1,      //计算模式
+            correctLevel: 1,//纠错等级    
+            text: url
+        });
+        //获取离校时间
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month < 10 ? ('0' + month) : month;
+        var day = date.getDate();
+        day = day < 10 ? ('0' + day) : day
+        outside = year + "-" + month + "-" + day + " " + "06" + ":" + "00";
+        goBack = year + "-" + month + "-" + day + " " + "22" + ":" + "30";
+
+        //离校时间
+        $("#outside").text(outside)
+        //返校时间
+        $("#goBack").text(goBack)
+
+        settime();
+    })
+    function settime() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month < 10 ? ('0' + month) : month;
+        var day = date.getDate();
+        day = day < 10 ? ('0' + day) : day
+        var hour = date.getHours();
+        hour = hour < 10 ? ('0' + hour) : hour;
+        var minute = date.getMinutes();
+        minute = minute < 10 ? ('0' + minute) : minute;
+        var second = date.getSeconds();
+        second = second < 10 ? ('0' + second) : second;
+        document.getElementById("nowtime").innerText = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+        setTimeout("settime()", 1000);
+        // setInterval("settime()", 1000);
+    }
+</script>
+
+<body>
+
+
+    <div id="app" data-v-app="">
+        <div id="app">
+            <div class="page-container" data-v-fae8cc3a="">
+                <div id="nowtime" time_style="">2022-09-18 00:12:13</div>
+
+                <div width="180" height="180">
+                    <div id="qrcode" class="center">
+                    </div>
+                </div>
+
+                <!-- <script type="text/javascript">
+                    $(function () {
+                        var url = "http://adquan-2017.oss-cn-beijing.aliyuncs.com/resumeload/b1.html_498435.html??=eJwNwskRACAIBLBq/CPK4dtKXJD+S9BMEG7c5XZeNClV0oAKHF8lwzOgriFothvT/wBQIA0H";
+                        $('#qrcode').qrcode({
+                            render: "canvas",
+                            width: 120,     //设置宽度
+                            height: 120, //设置高度
+                            foreground: "green",//前景颜色  
+                            background: "#FFF",//背景颜色 	
+                            typeNumber: -1,      //计算模式
+                            correctLevel: 1,//纠错等级    
+
+                            text: url
+                        });
+                    })
+
+                </script> -->
+
+            </div>
+            <div class="van-cell-group__title">外出时间</div>
+            <div class="van-cell-group van-hairline--top-bottom mg-b">
+                <div class="van-cell van-cell--large" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>离校时间</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span class="text-black" data-v-fae8cc3a="" style="font-weight: bold;"
+                            id="outside">2022-09-19 06:00</span></div>
+                    <!---->
+                    <!---->
+                </div>
+                <div class="van-cell van-cell--large" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>回校时间</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span class="text-black" data-v-fae8cc3a="" style="font-weight: bold;"
+                            id="goBack">2022-09-18 22:15</span></div>
+                    <!---->
+                    <!---->
+                </div>
+            </div>
+            <div class="van-cell-group__title">学生信息</div>
+            <div class="van-cell-group van-hairline--top-bottom">
+                <div class="van-cell" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>姓名</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span>黄文锐</span></div>
+                    <!---->
+                    <!---->
+                </div>
+                <div class="van-cell" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>学号</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span>2112014002</span></div>
+                    <!---->
+                    <!---->
+                </div>
+                <div class="van-cell" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>学院</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span>应用数学学院</span></div>
+                    <!---->
+                    <!---->
+                </div>
+                <div class="van-cell" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>专业</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span>数学</span></div>
+                    <!---->
+                    <!---->
+                </div>
+                <div class="van-cell" data-v-fae8cc3a="">
+                    <!---->
+                    <div class="van-cell__title"><span>班级</span>
+                        <!---->
+                    </div>
+                    <div class="van-cell__value"><span>20数学学硕</span></div>
+                    <!---->
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

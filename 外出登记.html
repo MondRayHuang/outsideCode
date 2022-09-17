@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://xsgl.gdut.edu.cn/index.php/mobiles/stu/leave-list?is_from_work=true&hacked=true -->
+<html lang="zh_CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name="apple-mobile/src-web-app-capable" content="yes">
+    <meta name="apple-mobile/src-web-app-status-bar-style" content="black">
+    <meta name="author" content="广州职迅信息科技有限公司(https://jobsys.cn)">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>外出登记</title>
+    <!-- <script src="./jweixin-1.2.0.js"></script> -->
+    <link href="./11845stu.58f650f0.css" rel="preload" as="style">
+    <link href="./chunk-vendors.583191b8.css" rel="preload" as="style">
+    <!-- <link href="./11845stu.577c46de.js" rel="preload" as="script"> -->
+    <!-- <link href="./chunk-vendors.ecb9d086.js" rel="preload" as="script"> -->
+    <link href="./chunk-vendors.583191b8.css" rel="stylesheet">
+    <link href="./11845stu.58f650f0.css" rel="stylesheet">
+    <!-- <script src="./chunk-vendors.ecb9d086.js"></script>
+    <script src="./11845stu.577c46de.js"></script> -->
+    <script src="./jquery-3.6.0.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#qrcode').click(function () {
+
+                window.location.href = "外出登记二维码.html"
+
+            })
+            //申请时间
+            $("#apply").text(applyDay)
+            //离校时间
+            $("#outside").text(outside)
+            //返校时间
+            $("#goBack").text(goBack)
+
+        })
+
+        //获取离校时间
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month < 10 ? ('0' + month) : month;
+        var day = date.getDate();
+        day = day < 10 ? ('0' + day) : day
+        applyDay = date.getDate() - 1;
+        applyDay = applyDay < 10 ? ('0' + applyDay) : applyDay
+        applyDay = year + "-" + month + "-" + applyDay + " " + "10" + ":" + "21";
+        outside = year + "-" + month + "-" + day + " " + "06" + ":" + "00";
+        goBack = year + "-" + month + "-" + day + " " + "22" + ":" + "30";
+
+
+        // $("#apply").text() = applyDay
+    </script>
+</head>
+
+<body>
+    <noscript>
+        "<strong>We're sorry but mobiles doesn't work properly without JavaScript enabled. Please
+            enable it to continue.</strong>"
+    </noscript>
+    <div id="app" data-v-app="">
+        <div id="app">
+            <div class="page-container bar">
+                <div role="feed" class="van-list" aria-busy="false" data-v-7a490d84="">
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="" id="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="" id="outside">2022-09-18
+                                    06:00</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="" id="goBack">2022-09-18 22:15
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市番禺区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div id="apply" class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-09-17 20:42
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="" id="qrcode">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class=" ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-08-31
+                                    07:00</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-08-31
+                                    14:00</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市天河区
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-08-30
+                                    18:41</div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-19 11:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-19 22:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市番禺区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-18 22:38
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-09 08:15
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-09 09:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市天河区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-08 21:55
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-07 08:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-07 16:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市天河区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-06 18:24
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-04 07:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-04 12:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市番禺区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-03 21:42
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-03 08:00
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-03 22:20
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市番禺区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-02 19:18
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-01 17:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-06-01 18:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市天河区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-31 22:29
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-29 06:20
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-29 22:20
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市番禺区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-28 21:21
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="ex-card van-hairline--bottom block mg-b" data-v-6a55dd86="">
+                        <div class="ex-card-header" data-v-6a55dd86="">
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="ex-card-content" data-v-6a55dd86="" style="height: auto;">
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">外出类型</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">在校外出</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请状态</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2=""><span
+                                        class="van-tag van-tag--medium van-tag--default green">学院审核通过
+                                        <!---->
+                                    </span></div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">离校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-27 15:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">返校时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-27 16:30
+                                </div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">前往地区</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">广东省广州市天河区</div>
+                            </div>
+                            <div class="ex-card-item" data-v-3a741fd2="" style="grid-column-start: span 2;">
+                                <div class="ex-card-item-title" data-v-3a741fd2="">申请时间</div>
+                                <div class="ex-card-item-value ellipsis" data-v-3a741fd2="">2022-05-26 22:50
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="van-cell-group ex-card-links" data-v-6a55dd86="">
+                            <div class="van-cell van-cell--center van-cell--clickable" role="button" tabindex="0">
+                                <!---->
+                                <div class="van-cell__title"><span>查看申请详情</span>
+                                    <!---->
+                                </div>
+                                <!----><i class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </i>
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="ex-card-footer btn-group" data-v-6a55dd86=""><button type="button"
+                                class="van-button van-button--primary van-button--small van-button--plain"
+                                data-v-6a55dd86="">
+                                <div class="van-button__content">
+                                    <!----><span class="van-button__text">查看二维码</span>
+                                    <!---->
+                                </div>
+                            </button>
+                            <!---->
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <div class="van-list__placeholder"></div>
+                </div>
+            </div>
+            <div class="van-action-bar">
+                <button type="button"
+                    class="van-button van-button--primary van-button--large van-action-bar-button van-action-bar-button--primary van-action-bar-button--last van-action-bar-button--first">
+                    <div class="van-button__content">
+                        <!----><span class="van-button__text">申请外出</span>
+                        <!---->
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+</body>
+
+</html>
